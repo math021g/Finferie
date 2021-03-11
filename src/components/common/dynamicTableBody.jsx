@@ -3,15 +3,15 @@ import { deleteApartment } from '../../services/apartmentService';
 import { deleteBooking } from '../../services/bookingService';
 import { deleteUser } from '../../services/userService';
 
-function rows(count, objs, using) {
+function rows(count, objs, usedFor) {
     const rows = [];
     for (let i = 0; i < count; i++) {
-        rows.push(<tr>{cells(objs[i], using)}</tr>)
+        rows.push(<tr>{cells(objs[i], usedFor)}</tr>)
     }
     return rows;
 }
 
-function cells(obj, using) {
+function cells(obj, usedFor) {
     const cells = [];
     const items = [];
 
@@ -22,24 +22,24 @@ function cells(obj, using) {
     for (let i = 0; i < items.length; i++) {
         cells.push(<td>{`${items[i]}`}</td>);
     }
-    console.log(using);
 
-    if (using === "user") {
-        cells.push(<button type="button" className="btn btn-danger" onClick={deleteUser(items[0])}>Slet</button>);
+    if (usedFor === "user") {
+        cells.push(<button type="button" className="btn btn-danger" onClick={() => {deleteUser(items[0])}}>Slet</button>);
     }
-    else if (using === "apartment") {
-        cells.push(<button type="button" className="btn btn-danger" onClick={deleteApartment(items[0])}>Slet</button>);
+    else if (usedFor === "apartment") {
+        cells.push(<button type="button" className="btn btn-danger" onClick={() => {deleteApartment(items[0])}}>Slet</button>);
     }
-    else if (using === "booking") {
-        cells.push(<button type="button" className="btn btn-danger" onClick={deleteBooking(items[0])}>Slet</button>);
+    else if (usedFor === "booking") {
+        cells.push(<button type="button" className="btn btn-danger" onClick={() => {deleteBooking(items[0])}}>Slet</button>);
     }
+
     return cells;
 }
 
-const DynamicTableBody = ({objs, using}) => {
+const DynamicTableBody = ({objs, usedFor}) => {
     return ( 
         <tbody>
-            {rows(objs.length, objs, using)}
+            {rows(objs.length, objs, usedFor)}
         </tbody>
     );
 }

@@ -105,8 +105,9 @@ class AdminPanel extends Component {
                                     <th>Navn</th>
                                     <th>Email</th>
                                     <th>Er Admin</th>
+                                    <th>&nbsp;</th>
                                 </thead>
-                                <DynamicTableBody objs={userArray} using={user_str}/>
+                                <DynamicTableBody objs={userArray} usedFor={user_str}/>
                             </table>
                         </div>
                     </div>
@@ -116,8 +117,9 @@ class AdminPanel extends Component {
                                 <thead className="thead-orange">
                                     <th>id</th>
                                     <th>Navn</th>
+                                    <th>&nbsp;</th>
                                 </thead>
-                                <DynamicTableBody objs={apartmentsArray} using={apartment_str}/>
+                                <DynamicTableBody objs={apartmentsArray} usedFor={apartment_str}/>
                             </table>
                         </div>
                     </div>
@@ -130,8 +132,9 @@ class AdminPanel extends Component {
                                     <th>Kunde</th>
                                     <th>Fra Dato</th>
                                     <th>Til Dato</th>
+                                    <th>&nbsp;</th>
                                 </thead>
-                                <DynamicTableBody objs={bookingArray} using={booking_str}/>
+                                <DynamicTableBody objs={bookingArray} usedFor={booking_str}/>
                             </table>
                         </div>
                     </div>
