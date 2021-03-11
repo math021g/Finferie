@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+#logo {
+    width: 52px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.center-text {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainHeading {
+    margin: 25px 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.thead-orange {
+    background-color: #f4992c;
+    color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+/* Carousel */
+
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+    object-position: 0% 55%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Omraadet */
+
+.img-omraadet {
+    width: 94%;
+    margin-right: 2em;
 }
+
+.img-omraadet-right {
+    width: 94%;
+    margin-left: 2em;
+}
+
+img.rounded  {
+    border-radius: .5em !important;
+}
+
+.shopping {
+    margin: 2em 0;
+}
+
+.section {
+    margin-bottom: 1.5em;
+}
+
+/* Apartments */
+
+.card-img-top {
+    height: 240px;
+}
+
+.btn-primary {
+    color: #fff !important; 
+    background-color: #f4992c !important;
+    border-color: #f4992c !important;
+    border-radius: 7px !important;
+}
+
